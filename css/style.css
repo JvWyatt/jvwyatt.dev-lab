@@ -9,40 +9,33 @@
 }
 .micro-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
 }
 .micro-img-placeholder {
-  background: rgba(255,255,255,0.04);
-  border-radius: 10px;
-  border: 1px dashed #00d4ff;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid #00d4ff;
   color: #aaa;
   font-size: 1.2rem;
-  height: 180px;
+  aspect-ratio: 16/9;
+  min-height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.3s;
+  box-sizing: border-box;
+  text-align: center;
+  backdrop-filter: blur(8px);
 }
 .micro-img-placeholder:hover {
   background: rgba(0,212,255,0.08);
   color: #00d4ff;
+  transform: scale(1.05);
 }
-@media (max-width: 900px) {
-  .micro-gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .micro-gallery-grid {
-    grid-template-columns: 1fr;
-  }
-  .micro-img-placeholder {
-    height: 120px;
-  }
-}
+/* Eliminar media queries para micro-gallery para mantener el mismo aspecto en móvil */
 /* Variables */
 :root {
   --bg-color: #0d1117;
@@ -274,12 +267,7 @@ header {
   background: none;
   border: none;
 }
-@media (max-width: 600px) {
-  .project-img-wrapper {
-    aspect-ratio: 16/9;
-    min-height: 120px;
-  }
-}
+/* Mantener aspecto de project-img-wrapper igual en móvil, sin override */
 
 /* SOBRE MÍ */
 .about {
@@ -362,11 +350,11 @@ footer {
   }
   .hero-img {
     order: -1;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .hero-img img {
-    width: 300px;
-    height: 300px;
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -381,25 +369,28 @@ footer {
 }
 .videos-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
 }
 .video-card {
-  background: rgba(255,255,255,0.04);
-  border-radius: 10px;
-  padding: 16px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 260px;
+  transition: transform 0.3s;
+  backdrop-filter: blur(8px);
 }
 .video-card p {
   margin-top: 12px;
   color: #aaa;
   font-size: 1rem;
+  transform: scale(1.05);
 }
 @media (max-width: 900px) {
   .videos-grid {
