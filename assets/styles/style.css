@@ -328,7 +328,6 @@ header {
 }
 
 .project-card:hover {
-  background: rgba(0, 212, 255, 0.08);
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
 }
 .project-tech {
@@ -653,7 +652,6 @@ header {
 }
 .video-card:hover {
   transform: scale(1.05);
-  background: rgba(0, 212, 255, 0.08);
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
 }
 .video-card iframe {
