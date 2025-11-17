@@ -306,7 +306,7 @@ header {
   padding: 20px;
   border-radius: 12px;
   text-align: center;
-  transition: transform 0.3s;
+  transition: all 0.3s ease;
   backdrop-filter: blur(8px);
   width: 100%;
   max-width: 300px;
@@ -325,6 +325,11 @@ header {
 
 .project-link:hover {
   transform: scale(1.05);
+}
+
+.project-card:hover {
+  background: rgba(0, 212, 255, 0.08);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
 }
 .project-tech {
   display: flex;
