@@ -17,8 +17,8 @@
       <ul class="nav-links">
         <li><a href="#home">Inicio</a></li>
         <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#publications">Publicaciones</a></li>
         <li><a href="#videos">Videos</a></li>
+        <li><a href="#publications">Publicaciones</a></li>
       </ul>
     </nav>
     <div class="hamburger" aria-label="Abrir menú de navegación" tabindex="0" role="button">
@@ -67,10 +67,9 @@
     <section id="projects" class="projects">
       <h2>Proyectos destacados</h2>
       <div class="project-grid">
-        <div class="project-card">
+        <a href="https://jvwyatt.github.io/eco-viva-azuero.org/" target="_blank" rel="noopener" class="project-card project-link">
           <div class="project-img-wrapper">
             <img src="./img/proyecto1.png" alt="Eco Viva Azuero" class="project-img">
-
           </div>
           <h3>Eco Viva Azuero</h3>
           <p>Web para ONG ambiental.</p>
@@ -79,11 +78,9 @@
             <span title="CSS3" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/></span>
             <span title="JavaScript" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/></span>
           </div>
-          <br>
-          <a href="https://jvwyatt.github.io/eco-viva-azuero.org/" target="_blank" rel="noopener" class="btn" style="margin-top:10px;">Ver página</a>
-        </div>
+        </a>
 
-        <div class="project-card">
+        <a href="https://jvwyatt.github.io/suits-tattoo-studio/" target="_blank" rel="noopener" class="project-card project-link">
           <div class="project-img-wrapper">
             <img src="./img/proyecto2.png" alt="Suits Tattoo Studio" class="project-img">
           </div>
@@ -94,9 +91,7 @@
             <span title="CSS3" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/></span>
             <span title="JavaScript" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/></span>
           </div>
-          <br>
-          <a href="https://jvwyatt.github.io/suits-tattoo-studio/" target="_blank" rel="noopener" class="btn" style="margin-top:10px;">Ver página</a>
-        </div>
+        </a>
         <div class="project-card">
           <div class="project-img-wrapper" style="background: repeating-linear-gradient(135deg, #222 0 20px, #2228 20px 40px), var(--card-bg); display: flex; align-items: center; justify-content: center;">
             <div class="project-under-construction" style="font-size:1.2rem;color:#00d4ff;text-shadow:0 1px 8px #000;">Próximamente</div>
@@ -109,63 +104,51 @@
       </div>
     </section>
 
+    <!-- VIDEOS DESTACADOS -->
+    <section id="videos" class="videos">
+      <h2>Videos Destacados</h2>
+      <div class="videos-grid">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+<br>
     <!-- PUBLICACIONES CIENTÍFICAS -->
     <section id="publications" class="publications">
       <h2>Publicaciones Científicas</h2>
       <div class="publications-list">
         
         <!-- Publicación 1 -->
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="" alt="Imagen de portada - Microbioma bacteriano" loading="lazy">
-          </div>
+        <a href="#" class="publication-item publication-link">
           <div class="publication-content">
             <h3>Microbioma bacteriano de suelo agrícola en Tonosí, Los Santos, Panamá</h3>
-            <p class="publication-meta">Año: 2024 | Tipo: Investigación original</p>
-            <p class="publication-description">
-              Estudio exhaustivo del microbioma bacteriano en suelos agrícolas de la región de Tonosí, 
-              enfocado en caracterizar las comunidades microbianas y su relación con propiedades del suelo.
+            <p class="publication-meta">Autores: José A. Vega-Jaén, Alexis De La Cruz, Luis C. Mejía</p>
+            <p class="publication-abstract">
+              Se caracterizó el microbioma bacteriano de suelo agrícola dedicado al cultivo de arroz en Tonosí, provincia de Los Santos, Panamá. Se empleó metabarcoding de la región V4 del gen 16S rRNA con 20 muestras secuenciadas en la plataforma Illumina MiSeq.
             </p>
-            <a href="#" class="btn-link">Leer más</a>
+            <p class="publication-keywords"><strong>Palabras clave:</strong> Suelo, Diversidad, Taxonomía, Microbioma, Metabarcoding</p>
           </div>
-        </article>
+        </a>
 
         <!-- Publicación 2 -->
-        <article class="publication-item">
-          <div class="publication-image">
-            <img src="" alt="Imagen de portada - Potencial biorremediador" loading="lazy">
-          </div>
+        <a href="#" class="publication-item publication-link">
           <div class="publication-content">
-            <h3>Evaluación del potencial biorremediador de Pseudomonas aeruginosa aislada de suelos con vocación arrocera frente al propiconazol</h3>
-            <p class="publication-meta">Año: 2024 | Tipo: Investigación aplicada</p>
-            <p class="publication-description">
-              Investigación sobre la capacidad de Pseudomonas aeruginosa para biorremediar suelos contaminados con propiconazol, 
-              aislada de zonas arroceras de Tonosí, Los Santos, Panamá.
+            <h3>Evaluación del potencial biorremediador de <i>Pseudomonas aeruginosa</i> frente al propiconazol</h3>
+            <p class="publication-meta">Autores: José A. Vega-Jaén, Alexis De La Cruz, Luis C. Mejía</p>
+            <p class="publication-abstract">
+              Se evaluó el potencial biorremediador de <i>Pseudomonas aeruginosa</i> aislada de suelos con vocación arrocera del Instituto Profesional y Técnico Agropecuario de Tonosí frente al propiconazol.
             </p>
-            <a href="#" class="btn-link">Leer más</a>
+            <p class="publication-keywords"><strong>Palabras clave:</strong> Suelo, Biorremediación, <i>Pseudomonas</i>, Propiconazol, Residualidad</p>
           </div>
-        </article>
+        </a>
 
-      </div>
-    </section>
-
-    <!-- VIDEOS DESTACADOS -->
-    <section id="videos" class="videos">
-      <h2>Videos destacados</h2>
-      <!-- Videos: grid en escritorio, carrusel en móvil (sin duplicar elementos) -->
-      <div class="videos-grid" id="videos-grid">
-        <div class="video-card">
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/d6lfkSIqQec?si=8dEEnB0Hg9owK_X8" title="¿Por qué la ciencia es importante? | JvWyatt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <p>Minería a cielo abierto</p>
-        </div>
-        <div class="video-card">
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/8sCVH_Kxr58?si=Ykzp-9_BetV4rS22" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <p>Partenogénesis</p>
-        </div>
-        <div class="video-card">
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/EzwvohoQiEE?si=G_0P5L6gTmUwf8U0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <p>Ebullición global</p>
-        </div>
       </div>
     </section>
   </main>
