@@ -710,7 +710,7 @@ header {
 /* ===================== FOOTER ===================== */
 footer {
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px 20px;
   background: linear-gradient(135deg, #0d1117 0%, #0a1929 50%, #1a3a52 100%);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(0, 212, 255, 0.1);
