@@ -479,6 +479,132 @@ header {
   color: #00d4ff;
 }
 
+/* ===================== PUBLICACIONES CIENTÍFICAS ===================== */
+.publications {
+  padding: 100px 0 60px 0;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.publications h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.publication-item {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+  align-items: start;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.publication-item:hover {
+  border-color: var(--accent);
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.publication-image {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publication-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.publication-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.publication-content h3 {
+  font-size: 1.3rem;
+  color: var(--accent);
+  line-height: 1.4;
+}
+
+.publication-meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.publication-description {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.btn-link {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: var(--bg-color);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--accent);
+}
+
+/* Responsive: mobile stack */
+@media (max-width: 900px) {
+  .publication-item {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .publication-image {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .publication-content {
+    text-align: center;
+  }
+
+  .publication-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn-link {
+    align-self: center;
+  }
+}
+
 /* ===================== VIDEOS DESTACADOS ===================== */
 .videos {
   padding: 100px 0 60px 0;

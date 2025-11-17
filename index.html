@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JV Dev-Lab</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css?v=2.0.0">
 </head>
 <body>
   <!-- HEADER principal y navegación accesible -->
@@ -17,7 +17,7 @@
       <ul class="nav-links">
         <li><a href="#home">Inicio</a></li>
         <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#micro-gallery">Galería</a></li>
+        <li><a href="#publications">Publicaciones</a></li>
         <li><a href="#videos">Videos</a></li>
       </ul>
     </nav>
@@ -108,21 +108,47 @@
         </div>
       </div>
     </section>
-    <!-- MICRO-GALERY -->
-    <section id="micro-gallery" class="micro-gallery">
-      <h2>Galería</h2>
-      <!-- Galería: grid en escritorio, carrusel en móvil (sin duplicar elementos) -->
-      <div class="micro-gallery-grid" id="gallery-grid">
-        <div class="gallery-item" tabindex="0">
-          <img src="./img/Generated Image October 14, 2025 - 7_30PM.png" alt="Avatar virtual holográfico de JvWyatt" loading="lazy">
-        </div>
-        <div class="micro-img-placeholder">Próximamente...</div>
-        <div class="micro-img-placeholder">Próximamente...</div>
-        <div class="micro-img-placeholder">Próximamente...</div>
-        <div class="micro-img-placeholder">Próximamente...</div>
-        <div class="micro-img-placeholder">Próximamente...</div>
+
+    <!-- PUBLICACIONES CIENTÍFICAS -->
+    <section id="publications" class="publications">
+      <h2>Publicaciones Científicas</h2>
+      <div class="publications-list">
+        
+        <!-- Publicación 1 -->
+        <article class="publication-item">
+          <div class="publication-image">
+            <img src="" alt="Imagen de portada - Microbioma bacteriano" loading="lazy">
+          </div>
+          <div class="publication-content">
+            <h3>Microbioma bacteriano de suelo agrícola en Tonosí, Los Santos, Panamá</h3>
+            <p class="publication-meta">Año: 2024 | Tipo: Investigación original</p>
+            <p class="publication-description">
+              Estudio exhaustivo del microbioma bacteriano en suelos agrícolas de la región de Tonosí, 
+              enfocado en caracterizar las comunidades microbianas y su relación con propiedades del suelo.
+            </p>
+            <a href="#" class="btn-link">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Publicación 2 -->
+        <article class="publication-item">
+          <div class="publication-image">
+            <img src="" alt="Imagen de portada - Potencial biorremediador" loading="lazy">
+          </div>
+          <div class="publication-content">
+            <h3>Evaluación del potencial biorremediador de Pseudomonas aeruginosa aislada de suelos con vocación arrocera frente al propiconazol</h3>
+            <p class="publication-meta">Año: 2024 | Tipo: Investigación aplicada</p>
+            <p class="publication-description">
+              Investigación sobre la capacidad de Pseudomonas aeruginosa para biorremediar suelos contaminados con propiconazol, 
+              aislada de zonas arroceras de Tonosí, Los Santos, Panamá.
+            </p>
+            <a href="#" class="btn-link">Leer más</a>
+          </div>
+        </article>
+
       </div>
     </section>
+
     <!-- VIDEOS DESTACADOS -->
     <section id="videos" class="videos">
       <h2>Videos destacados</h2>
