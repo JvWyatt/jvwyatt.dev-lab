@@ -642,7 +642,13 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 260px;
+  overflow: hidden;
+}
+.video-card iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
 }
 .video-card p {
   margin-top: 12px;
