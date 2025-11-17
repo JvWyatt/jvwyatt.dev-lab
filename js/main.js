@@ -22,3 +22,46 @@
     }
   });
 })();
+
+/**
+ * HERO PORTRAIT TOGGLE
+ * Alterna entre la foto real y el avatar virtual con hover (mouse) o toque/clic accesible.
+ */
+(function heroPortraitToggle() {
+  const heroToggle = document.querySelector('.hero-img');
+  if (!heroToggle) return;
+
+  const togglePortrait = () => {
+    const isAvatar = heroToggle.classList.toggle('show-avatar');
+    heroToggle.setAttribute('aria-pressed', isAvatar ? 'true' : 'false');
+  };
+
+  // Hover con mouse
+  heroToggle.addEventListener('pointerenter', (event) => {
+    if (event.pointerType === 'mouse') {
+      togglePortrait();
+    }
+  });
+
+  // Toque o lápiz
+  heroToggle.addEventListener('pointerup', (event) => {
+    if (event.pointerType && event.pointerType !== 'mouse') {
+      togglePortrait();
+    }
+  });
+
+  // Accesibilidad por teclado
+  heroToggle.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      togglePortrait();
+    }
+  });
+
+  // Clic generado por teclado (detail === 0)
+  heroToggle.addEventListener('click', (event) => {
+    if (event.detail === 0) {
+      togglePortrait();
+    }
+  });
+})();

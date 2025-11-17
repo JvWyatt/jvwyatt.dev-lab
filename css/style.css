@@ -45,6 +45,54 @@ header {
   --card-bg: rgba(255, 255, 255, 0.05);
   --accent: #00d4ff;
   --text-color: #fff;
+.gallery-item,
+.micro-img-placeholder {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  border: 1px solid #00d4ff;
+  background: rgba(255,255,255,0.04);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.gallery-item {
+  box-shadow: 0 0 12px #00d4ff22;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item:hover,
+.gallery-item:focus-visible {
+  transform: scale(1.03);
+  box-shadow: 0 0 22px #00d4ff44;
+}
+
+.micro-img-placeholder {
+  border-style: dashed;
+  color: #9fb0c0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.micro-img-placeholder:hover,
+.micro-img-placeholder:focus-visible {
+  background: rgba(0,212,255,0.08);
+  color: #00d4ff;
+}
   --font-main: 'Arial', sans-serif;
 }
 
@@ -172,13 +220,59 @@ header {
   transform: scale(1.05);
 }
 
-.hero-img img {
-  width: 300px;
-  height: 300px;
+.hero-img {
+  position: relative;
+  width: 320px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.45s ease;
+}
+
+.hero-img:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 6px;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   border: 4px solid var(--accent);
   box-shadow: 0 0 20px var(--accent);
   object-fit: cover;
+  opacity: 0;
+  transform: scale(0.96) translateY(4px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  will-change: opacity, transform;
+}
+
+.hero-photo--real {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  z-index: 2;
+}
+
+.hero-photo--avatar {
+  z-index: 1;
+}
+
+.hero-img.show-avatar {
+  transform: rotate(-2deg) scale(1.02);
+}
+
+.hero-img.show-avatar .hero-photo--real {
+  opacity: 0;
+  transform: scale(1.05) translateY(-6px);
+}
+
+.hero-img.show-avatar .hero-photo--avatar {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  z-index: 3;
 }
 
 /* ===================== PROYECTOS ===================== */
@@ -251,7 +345,6 @@ header {
 /* Utilidad para tarjetas 16:9 */
 .card-16-9,
 .project-img-wrapper,
-.micro-img-placeholder,
 .video-frame-wrapper {
   position: relative;
   width: 100%;
@@ -271,19 +364,6 @@ header {
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.micro-img-placeholder {
-  border: 1px dashed #00d4ff;
-  color: #aaa;
-  font-size: 1.2rem;
-  transition: background 0.2s;
-  max-width: 340px;
-  width: 100%;
-}
-.micro-img-placeholder:hover {
-  background: rgba(0,212,255,0.08);
-  color: #00d4ff;
 }
 
 .video-card iframe {
@@ -347,15 +427,54 @@ header {
   margin: 0 auto;
   justify-items: center; /* Centra las tarjetas en la grilla */
 }
+
+.gallery-item,
 .micro-img-placeholder {
-  /* Hereda de .card-16-9 */
-  background: rgba(255,255,255,0.04);
-  border: 1px dashed #00d4ff;
-  color: #aaa;
-  font-size: 1.2rem;
-  transition: background 0.2s;
-  max-width: 340px; /* Limita el ancho máximo de la tarjeta */
   width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  border: 1px solid #00d4ff;
+  background: rgba(255,255,255,0.04);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.gallery-item {
+  box-shadow: 0 0 12px #00d4ff22;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item:hover,
+.gallery-item:focus-visible {
+  transform: scale(1.03);
+  box-shadow: 0 0 22px #00d4ff44;
+}
+
+.micro-img-placeholder {
+  border-style: dashed;
+  color: #9fb0c0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.micro-img-placeholder:hover,
+.micro-img-placeholder:focus-visible {
+  background: rgba(0,212,255,0.08);
+  color: #00d4ff;
 }
 
 /* ===================== VIDEOS DESTACADOS ===================== */
@@ -445,6 +564,24 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .hero-img {
+    transition: none;
+  }
+  .hero-photo {
+    transition: none;
+    transform: none !important;
+  }
+  .hero-img.show-avatar {
+    transform: none;
+  }
+  .hero-img.show-avatar .hero-photo--real,
+  .hero-img.show-avatar .hero-photo--avatar,
+  .hero-photo--real {
+    transform: none !important;
+  }
+}
+
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 900px) {
   .project-grid,
@@ -461,15 +598,9 @@ footer {
   }
   .hero-img {
     order: -1;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
+    margin: 0 auto 20px;
     width: 100%;
-  }
-  .hero-img img {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto;
+    max-width: 240px;
   }
   .hero-content {
     max-width: 100%;
@@ -487,6 +618,7 @@ footer {
     justify-items: center;
   }
   .micro-img-placeholder,
+  .gallery-item,
   .project-img-wrapper,
   .video-frame-wrapper {
     min-height: 120px;
@@ -527,15 +659,9 @@ footer {
   }
   .hero-img {
     order: -1;
-    margin-bottom: 16px;
-    display: flex;
-    justify-content: center;
+    margin: 0 auto 16px;
     width: 100%;
-  }
-  .hero-img img {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto;
+    max-width: 180px;
   }
   .hero-content {
     max-width: 100%;
