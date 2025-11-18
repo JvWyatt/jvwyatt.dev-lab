@@ -705,6 +705,23 @@ header {
   filter: drop-shadow(0 0 2px #00d4ff44);
 }
 
+/* Hero social links hover: subtle scale and glow on the icon, gentle background on the button */
+.hero-social-links a {
+  transition: transform 180ms ease;
+  will-change: transform;
+}
+.hero-social-links a:hover,
+.hero-social-links a:focus {
+  transform: translateY(-3px);
+}
+.hero-social-links a .contact-icon {
+  transition: transform 180ms ease;
+}
+.hero-social-links a:hover .contact-icon,
+.hero-social-links a:focus .contact-icon {
+  transform: scale(1.12);
+}
+
 /* ===================== FOOTER ===================== */
 footer {
   text-align: center;
