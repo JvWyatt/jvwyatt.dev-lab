@@ -26,14 +26,19 @@
 /**
  * HERO PORTRAIT TOGGLE
  * Alterna entre la foto real y el avatar virtual con hover (mouse) o toque/clic accesible.
+ * También cambia el nombre mostrado entre el nombre completo y las iniciales.
  */
 (function heroPortraitToggle() {
   const heroToggle = document.querySelector('.hero-img');
-  if (!heroToggle) return;
+  const heroName = document.querySelector('#hero-name');
+  if (!heroToggle || !heroName) return;
 
   const togglePortrait = () => {
     const isAvatar = heroToggle.classList.toggle('show-avatar');
     heroToggle.setAttribute('aria-pressed', isAvatar ? 'true' : 'false');
+    
+    // Cambiar el nombre según la imagen mostrada
+    heroName.textContent = isAvatar ? 'JV' : 'José A. Vega-Jaén';
   };
 
   // Hover con mouse
