@@ -38,7 +38,7 @@
     heroToggle.setAttribute('aria-pressed', isAvatar ? 'true' : 'false');
     
     // Cambiar el nombre según la imagen mostrada
-    heroName.textContent = isAvatar ? 'JV' : 'José A. Vega-Jaén';
+    heroName.textContent = isAvatar ? 'JV Wyatt' : 'José A. Vega-Jaén';
   };
 
   // Hover con mouse
