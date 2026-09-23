@@ -578,13 +578,14 @@ footer p {
 }
 
 /* ===================== REVEAL ON SCROLL ===================== */
-.reveal {
+/* Solo se oculta el contenido si hay JS; sin JS todo es visible */
+.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.visible {
+.js .reveal.visible {
   opacity: 1;
   transform: none;
 }
