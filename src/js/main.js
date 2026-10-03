@@ -103,22 +103,13 @@
 /**
  * REVEAL ON SCROLL
  * Aparición suave de secciones al hacer scroll.
- * Con degradación segura: si no hay IntersectionObserver o nada dispara el
- * evento, el contenido se muestra igualmente (temporizador de seguridad).
  */
 (function revealOnScroll() {
   const items = document.querySelectorAll('.reveal');
   if (!items.length) return;
 
-  const showAll = () => items.forEach((el) => el.classList.add('visible'));
-
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    showAll();
-    return;
-  }
-
-  if (!('IntersectionObserver' in window)) {
-    showAll();
+    items.forEach((el) => el.classList.add('visible'));
     return;
   }
 
@@ -135,9 +126,6 @@
   );
 
   items.forEach((el) => observer.observe(el));
-
-  // Seguridad: pase lo que pase, el contenido se muestra por completo
-  setTimeout(showAll, 3000);
 })();
 
 /**

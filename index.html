@@ -16,15 +16,12 @@
 
   <link rel="icon" href="./assets/images/favicon.png" type="image/png">
 
-  <!-- Detección de JS: si no está disponible el contenido siempre es visible -->
-  <script>document.documentElement.classList.add('js');</script>
-
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./assets/styles/style.css?v=3.1.0">
+  <link rel="stylesheet" href="./assets/styles/style.css?v=3.0.0">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Saltar al contenido</a>
@@ -82,25 +79,26 @@
     <section id="projects" class="projects">
       <h2 class="reveal">Proyectos destacados</h2>
       <div class="project-grid reveal">
+        <!-- SCI-KIT: añadir href, target="_blank" y rel="noopener" cuando exista una URL pública. -->
+        <a class="project-card project-link">
+          <div class="project-img-wrapper">
+            <img src="./assets/images/SCI-KIT.png" alt="SCI-KIT" class="project-img" loading="lazy" decoding="async">
+          </div>
+          <h3>SCI-KIT</h3>
+          <p>Herramientas de laboratorio</p>
+          <div class="project-tech">
+            <span title="Flutter" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"/></span>
+            <span title="Dart" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"/></span>
+            <span title="Android" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android"/></span>
+          </div>
+        </a>
+
         <a href="https://jvwyatt.github.io/eco-viva-azuero.org/" target="_blank" rel="noopener" class="project-card project-link">
           <div class="project-img-wrapper">
             <img src="./assets/images/project-eco-viva.png" alt="Eco Viva Azuero" class="project-img" loading="lazy" decoding="async">
           </div>
           <h3>Eco Viva Azuero</h3>
           <p>Web para OBC ambiental</p>
-          <div class="project-tech">
-            <span title="HTML5" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/></span>
-            <span title="CSS3" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/></span>
-            <span title="JavaScript" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/></span>
-          </div>
-        </a>
-
-        <a href="https://jvwyatt.github.io/suits-tattoo-studio/" target="_blank" rel="noopener" class="project-card project-link">
-          <div class="project-img-wrapper">
-            <img src="./assets/images/project-suits-tattoo.png" alt="Suits Tattoo Studio" class="project-img" loading="lazy" decoding="async">
-          </div>
-          <h3>Suits Tattoo Studio</h3>
-          <p>Web para estudio de tatuajes</p>
           <div class="project-tech">
             <span title="HTML5" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/></span>
             <span title="CSS3" class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/></span>
@@ -145,7 +143,7 @@
             <h3>Microbioma bacteriano de suelo agrícola en Tonosí, Los Santos, Panamá</h3>
 
             <p class="publication-meta">
-              Revista: Tecnociencia | Autores: José A. Vega-Jaén, Alexis De La Cruz, Luis C. Mejía
+              Revista: SCIENTIA | Estado: En revisión | Número previsto: julio–diciembre de 2027 | Autores: José A. Vega-Jaén, Alexis De La Cruz, Luis C. Mejía
             </p>
 
             <p class="publication-abstract">
@@ -161,7 +159,7 @@
             <h3>Evaluación del potencial biorremediador de <i>Pseudomonas aeruginosa</i> frente al propiconazol</h3>
 
             <p class="publication-meta">
-              Revista: Tecnociencia | Autores: José A. Vega-Jaén, Alexis De La Cruz, Luis C. Mejía
+              Revista: SCIENTIA | Estado: En revisión | Número previsto: enero–junio de 2027 | Autores: José A. Vega-Jaén, Alexis De La Cruz, Luis C. Mejía
             </p>
 
             <p class="publication-abstract">
@@ -178,6 +176,7 @@
   <!-- FOOTER -->
   <footer role="contentinfo">
     <p>JV Dev-Lab. Todos los derechos reservados. &copy; <span id="year">2025</span></p>
+    <p class="footer-privacy"><a href="./docs/privacy-policies.html">Políticas de privacidad</a></p>
   </footer>
 
   <button class="go-to-top" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>

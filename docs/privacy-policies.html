@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Políticas de privacidad — JV / Dev-Lab</title>
+  <meta name="description" content="Consulta la política de privacidad de cada proyecto de JV / Dev-Lab.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles/style.css?v=3.0.0">
+  <style>
+    .policies-page { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .policies-back { display: inline-block; margin-bottom: 40px; color: var(--accent); text-underline-offset: 3px; }
+    .policies-page h1 { font-size: clamp(1.6rem, 5vw, 2.4rem); margin-bottom: 12px; }
+    .policies-intro { color: var(--muted); margin-bottom: 32px; }
+    .policies-list { list-style: none; display: grid; gap: 12px; }
+    .policies-list a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px; background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; color: var(--text-color); text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease; }
+    .policies-list a:hover, .policies-list a:focus-visible { background: var(--accent-soft); border-color: var(--accent); }
+    .policies-list strong { font-family: var(--font-display); }
+    .policies-list small { display: block; color: var(--muted); margin-top: 4px; }
+    .policies-arrow { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#policies-list">Saltar a los proyectos</a>
+  <main class="policies-page">
+    <a class="policies-back" href="../index.html">← JV / Dev-Lab</a>
+    <h1>Políticas de privacidad</h1>
+    <p class="policies-intro">Selecciona un proyecto para consultar su política de privacidad.</p>
+    <ul class="policies-list" id="policies-list" aria-label="Políticas por proyecto">
+      <!-- Añadir un elemento li con su enlace por cada nueva política de proyecto. -->
+      <li>
+        <a href="./sci-kit-privacy-policy.html">
+          <span><strong>SCI-KIT</strong><small>Herramientas de laboratorio</small></span>
+          <span class="policies-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

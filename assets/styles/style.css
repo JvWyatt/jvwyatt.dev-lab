@@ -546,6 +546,23 @@ footer p {
   letter-spacing: 0.3px;
 }
 
+.footer-privacy {
+  margin-top: 8px;
+}
+
+.footer-privacy a {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-privacy a:hover,
+.footer-privacy a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 /* ===================== VOLVER ARRIBA ===================== */
 .go-to-top {
   position: fixed;
@@ -578,14 +595,13 @@ footer p {
 }
 
 /* ===================== REVEAL ON SCROLL ===================== */
-/* Solo se oculta el contenido si hay JS; sin JS todo es visible */
-.js .reveal {
+.reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.js .reveal.visible {
+.reveal.visible {
   opacity: 1;
   transform: none;
 }
