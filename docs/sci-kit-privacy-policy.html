@@ -28,6 +28,14 @@
     .policy-page article ul { padding-left: 24px; }
     .policy-page article li + li { margin-top: 6px; }
     .policy-page code { overflow-wrap: anywhere; }
+    .policy-page .scikit-faq { max-width: none; margin: 40px 0 0; padding: 0; border-top: 1px solid rgba(255, 255, 255, 0.12); }
+    .policy-page .scikit-faq h2 { text-align: left; }
+    .scikit-faq details { margin-top: 12px; background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; overflow-wrap: anywhere; }
+    .scikit-faq summary { padding: 16px 20px; font-weight: 600; cursor: pointer; }
+    .scikit-faq summary::marker { color: var(--accent); }
+    .scikit-faq summary:hover { color: var(--accent); }
+    .scikit-faq details[open] { border-color: var(--accent); }
+    .policy-page .scikit-faq details p { margin: 0; padding: 0 20px 20px; }
   </style>
 </head>
 <body>
@@ -145,6 +153,62 @@
 
       <h2>15. Fecha de entrada en vigor</h2>
       <p><strong><time datetime="2026-10-03">3 de octubre de 2026</time></strong></p>
+
+      <section class="scikit-faq" aria-labelledby="faq-es-title">
+        <h2 id="faq-es-title">Preguntas frecuentes (FAQ)</h2>
+        <details>
+          <summary>¿Para qué sirve SCI-KIT?</summary>
+          <p>SCI-KIT reúne herramientas de laboratorio para realizar cálculos científicos, trabajar con preparaciones, Master Mix y protocolos, y utilizar temporizadores. También permite guardar y recuperar contenido y ajustar preferencias como el idioma, el tema y el dashboard.</p>
+        </details>
+        <details>
+          <summary>¿Necesito crear una cuenta?</summary>
+          <p>No. SCI-KIT funciona sin cuentas ni inicio de sesión.</p>
+        </details>
+        <details>
+          <summary>¿Necesito conexión a Internet para usar la aplicación?</summary>
+          <p>Las herramientas de SCI-KIT funcionan localmente y la versión de producción no declara el permiso de Internet. Los servicios externos que elijas usar, como Google Play o una aplicación para compartir archivos, y las copias de seguridad de Android pueden necesitar conexión.</p>
+        </details>
+        <details>
+          <summary>¿Dónde se guardan mis datos? ¿Se guarda todo automáticamente?</summary>
+          <p>El contenido guardado y las preferencias se almacenan en el dispositivo. Los resultados y borradores que no guardes pueden permanecer solo en memoria durante su uso; no debes asumir que se conservarán. SCI-KIT no tiene un servicio propio de almacenamiento o sincronización en la nube.</p>
+        </details>
+        <details>
+          <summary>¿SCI-KIT envía mis datos al desarrollador o incluye publicidad?</summary>
+          <p>No envía automáticamente tus protocolos, preparaciones ni resultados al desarrollador y no tiene servidores propios para recibirlos. Tampoco incorpora publicidad, analítica, seguimiento ni servicios externos de informes de fallos. Las copias de Android y las aplicaciones externas que uses se rigen por sus propias condiciones.</p>
+        </details>
+        <details>
+          <summary>¿Puedo recuperar mis datos al reinstalar la app o cambiar de dispositivo?</summary>
+          <p>Android puede realizar copias, restaurar datos y transferirlos entre dispositivos, según su versión, el dispositivo y tu configuración. Los datos elegibles incluyen preparaciones, Master Mix, protocolos y preferencias persistentes; no incluyen cachés ni exportaciones temporales. La creación y restauración de copias no está garantizada y el desarrollador no puede acceder directamente a ellas.</p>
+        </details>
+        <details>
+          <summary>¿Qué puedo exportar o compartir?</summary>
+          <p>Según la herramienta, puedes generar y compartir contenido en PNG, PDF o JSON. Tú inicias la acción y eliges el destino. Los archivos pueden incluir resultados, nombres y descripciones que hayas introducido; la aplicación receptora los tratará según sus propias políticas.</p>
+        </details>
+        <details>
+          <summary>¿Qué ocurre con los resultados que guardo en la galería?</summary>
+          <p>Las imágenes PNG se guardan fuera del almacenamiento privado de SCI-KIT y pueden permanecer tras desinstalarla. Guardarlas no las envía al desarrollador, pero un servicio de sincronización de fotos o archivos puede copiarlas según tu configuración.</p>
+        </details>
+        <details>
+          <summary>¿Cómo elimino mis datos? ¿Desinstalar borra todas las copias?</summary>
+          <p>Puedes eliminar elementos guardados donde exista esa opción, borrar los datos de la aplicación desde Android o desinstalarla para eliminar su almacenamiento local. Esto no garantiza borrar copias de seguridad, imágenes de la galería, exportaciones ni archivos compartidos. Debes gestionar esas copias en el sistema o servicio correspondiente; un backup puede restaurar datos anteriores.</p>
+        </details>
+        <details>
+          <summary>¿SCI-KIT utiliza inteligencia artificial con mis protocolos?</summary>
+          <p>No integra servicios de IA ni envía protocolos a un modelo. Copiar un prompt solo lo coloca en el portapapeles; también puedes pegar JSON para importar un protocolo. Si pegas contenido en una herramienta externa de IA, se aplican las políticas de esa herramienta.</p>
+        </details>
+        <details>
+          <summary>¿Para qué usa permisos SCI-KIT?</summary>
+          <p>La vibración se utiliza para las alertas de los temporizadores. En Android 9 y versiones anteriores, el permiso de almacenamiento externo permite guardar imágenes en la galería.</p>
+        </details>
+        <details>
+          <summary>¿La Cámara de Neubauer utiliza la cámara de mi teléfono?</summary>
+          <p>No. El nombre se refiere a un portaobjetos especial utilizado para contar células al microscopio. La herramienta de SCI-KIT facilita los cálculos asociados a ese recuento, sin utilizar la cámara del teléfono.</p>
+        </details>
+        <details>
+          <summary>¿Dónde puedo consultar dudas sobre privacidad o mis datos?</summary>
+          <p>Consulta la <a href="#es">política de privacidad completa</a> de esta página. Si tu duda no está resuelta, puedes escribir a <a href="mailto:jvwyatt20@gmail.com">jvwyatt20@gmail.com</a>, el contacto publicado para privacidad y manejo de información. El desarrollador no puede acceder a tus datos locales ni borrar copias gestionadas por Android o servicios externos.</p>
+        </details>
+      </section>
     </article>
 
     <article id="en" lang="en" aria-labelledby="english-title">
@@ -250,6 +314,62 @@
 
       <h2>15. Effective date</h2>
       <p><strong><time datetime="2026-10-03">October 3, 2026</time></strong></p>
+
+      <section class="scikit-faq" aria-labelledby="faq-en-title">
+        <h2 id="faq-en-title">Frequently asked questions (FAQ)</h2>
+        <details>
+          <summary>What is SCI-KIT for?</summary>
+          <p>SCI-KIT brings together laboratory tools for scientific calculations, working with preparations, Master Mix and protocols, and using timers. It also lets you save and retrieve content and adjust preferences such as language, theme and dashboard settings.</p>
+        </details>
+        <details>
+          <summary>Do I need to create an account?</summary>
+          <p>No. SCI-KIT works without accounts or sign-in.</p>
+        </details>
+        <details>
+          <summary>Do I need an Internet connection to use the app?</summary>
+          <p>SCI-KIT’s tools work locally, and the production version does not declare the Internet permission. External services you choose to use, such as Google Play or a file-sharing app, and Android backups may need a connection.</p>
+        </details>
+        <details>
+          <summary>Where is my data stored? Is everything saved automatically?</summary>
+          <p>Saved content and preferences are stored on your device. Results and drafts you do not save may remain only in memory while in use; you should not assume they will be retained. SCI-KIT does not have its own cloud storage or synchronization service.</p>
+        </details>
+        <details>
+          <summary>Does SCI-KIT send my data to the developer or include advertising?</summary>
+          <p>It does not automatically send your protocols, preparations or results to the developer and has no servers of its own to receive them. It also has no advertising, analytics, tracking or external crash-reporting services. Android backups and external apps you use are governed by their own terms.</p>
+        </details>
+        <details>
+          <summary>Can I recover my data after reinstalling the app or changing devices?</summary>
+          <p>Android may back up, restore and transfer data between devices, depending on its version, your device and your settings. Eligible data includes preparations, Master Mix, protocols and persistent preferences; it excludes caches and temporary exports. Backup and restoration are not guaranteed, and the developer cannot access these backups directly.</p>
+        </details>
+        <details>
+          <summary>What can I export or share?</summary>
+          <p>Depending on the tool, you can generate and share content in PNG, PDF or JSON format. You initiate the action and choose the destination. Files may include results, names and descriptions you entered; the receiving app handles them under its own policies.</p>
+        </details>
+        <details>
+          <summary>What happens to results I save to the gallery?</summary>
+          <p>PNG images are saved outside SCI-KIT’s private storage and may remain after you uninstall it. Saving them does not send them to the developer, but a photo or file synchronization service may copy them according to your settings.</p>
+        </details>
+        <details>
+          <summary>How do I delete my data? Does uninstalling delete all copies?</summary>
+          <p>You can delete saved items where that option exists, clear the app’s data in Android or uninstall it to remove its local storage. This does not guarantee deletion of backups, gallery images, exports or shared files. Manage those copies in the relevant system or service; a backup may restore previous data.</p>
+        </details>
+        <details>
+          <summary>Does SCI-KIT use artificial intelligence with my protocols?</summary>
+          <p>It does not integrate AI services or send protocols to a model. Copying a prompt only places it on the clipboard; you can also paste JSON to import a protocol. If you paste content into an external AI tool, that tool’s policies apply.</p>
+        </details>
+        <details>
+          <summary>What does SCI-KIT use permissions for?</summary>
+          <p>Vibration is used for timer alerts. On Android 9 and earlier versions, external storage permission allows images to be saved to the gallery.</p>
+        </details>
+        <details>
+          <summary>Does Neubauer Chamber use my phone’s camera?</summary>
+          <p>No. The name refers to a specialized slide used to count cells under a microscope. The SCI-KIT tool helps with calculations associated with that count, without using your phone’s camera.</p>
+        </details>
+        <details>
+          <summary>Where can I ask questions about privacy or my data?</summary>
+          <p>Read the <a href="#en">full privacy policy</a> on this page. If your question remains unanswered, you can email <a href="mailto:jvwyatt20@gmail.com">jvwyatt20@gmail.com</a>, the published contact for privacy and information handling. The developer cannot access your local data or delete copies managed by Android or external services.</p>
+        </details>
+      </section>
     </article>
   </main>
   <script>
